@@ -34,7 +34,7 @@ then
 fi
 profile_path="$home_dir/$shell_profile"
 # export alias to shell profile and source it
-echo "alias vpn='~/autoVpn/vpn_auto_login.exp $host $username \"$passwd\" $(oathtool --totp -b $secret)'" >> "$profile_path"
+echo "alias vpn='~/autoVpn/vpn_auto_login.exp $host $username \"$passwd\" \$(oathtool --totp -b $secret)'" >> "$profile_path"
 echo "alias disconnect='/opt/cisco/anyconnect/bin/vpn disconnect'" >> "$profile_path"
 
 source $profile_path
