@@ -1,0 +1,19 @@
+#!/usr/bin/expect
+
+set host [lindex $argv 0]
+set username [lindex $argv 1]
+set password [lindex $argv 2]
+set OTP_CODE [lindex $argv 3]
+
+spawn /opt/cisco/anyconnect/bin/vpn connect $host
+
+expect "Username:" {
+        send $username
+        send "\r"
+}
+expect "Password:" {
+        send $password$OTP_CODE
+        send "\r"
+}
+
+interact
