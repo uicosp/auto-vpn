@@ -19,7 +19,7 @@ install_dir="$home_dir/autoVpn"
 [ -d install_dir ] || mkdir $install_dir
 # download vpn_auto_login.exp
 curl --url "https://raw.githubusercontent.com/uicosp/auto-vpn/main/vpn_auto_login.exp" \
-    --output "$install_dir/vpn_auto_login.sh"
+    --output "$install_dir/vpn_auto_login.exp"
 # detect default shell to determine the profile name, current supported: zsh/bash
 shell_profile=''
 if [[ $SHELL =~ "zsh" ]]
